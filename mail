@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Хранение шин - Калькулятор</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Калькулятор хранения шин</h1>
+        
+        <div class="block">
+            <label>Диаметр шин:</label>
+            <div class="diameter-buttons">
+                <button class="diameter-button" data-value="350">R13</button>
+                <button class="diameter-button" data-value="350">R14</button>
+                <button class="diameter-button" data-value="400">R15</button>
+                <button class="diameter-button" data-value="400">R16</button>
+                <button class="diameter-button" data-value="450">R17</button>
+                <button class="diameter-button" data-value="450">R18</button>
+                <button class="diameter-button" data-value="500">R19</button>
+                <button class="diameter-button" data-value="500">R20</button>
+                <button class="diameter-button" data-value="550">R21</button>
+            </div>
+        </div>
+
+        <div class="block">
+            <label for="withDisk">С диском:</label>
+            <input type="checkbox" id="withDisk">
+        </div>
+
+        <div class="block">
+            <label for="quantity">Количество шин (1-8):</label>
+            <input type="range" id="quantity" min="1" max="8" value="4">
+            <span id="quantityValue">4</span>
+        </div>
+
+        <div class="block">
+            <label for="months">Количество месяцев (2-6):</label>
+            <input type="range" id="months" min="2" max="6" value="4">
+            <span id="monthsValue">4</span>
+        </div>
+
+        <div class="result-block">
+            <h2>Стоимость услуги:</h2>
+            <p id="result">0 руб.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
