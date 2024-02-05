@@ -49,3 +49,16 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 15px;
+}
+
+.input-group {
+  /* Стили для группы ввода данных */
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+#result {
