@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор хранения шин</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <h1>Сезонное хранения шин</h1>
+
+    <!-- Первый блок -->
+    <div class="btn-group" id="diameterButtons">
+      <label class="input-label">Укажите диаметр колёс</label>
+<button class="diameter-btn" onclick="setDiameter(13, 100)">R13</button>
+<button class="diameter-btn" onclick="setDiameter(14, 100)">R14</button>
+<button class="diameter-btn" onclick="setDiameter(15, 125)">R15</button>
+<button class="diameter-btn" onclick="setDiameter(16, 125)">R16</button>
+<button class="diameter-btn" onclick="setDiameter(17, 150)">R17</button>
+<button class="diameter-btn" onclick="setDiameter(18, 150)">R18</button>
+<button class="diameter-btn" onclick="setDiameter(19, 200)">R19</button>
+<button class="diameter-btn" onclick="setDiameter(20, 200)">R20</button>
+<button class="diameter-btn" onclick="setDiameter(21, 225)">R21</button>
+    </div>
+
+    <!-- Второй блок -->
 <div class="input-group" id="withDiskGroup">
   <label class="input-label">С диском</label>
   <div class="switch-container">
@@ -16,24 +44,3 @@
       <button class="quantity-btn" onclick="setQuantity(5)">5</button>
       <button class="quantity-btn" onclick="setQuantity(6)">6</button>
       <button class="quantity-btn" onclick="setQuantity(7)">7</button>
-      <button class="quantity-btn" onclick="setQuantity(8)">8</button>
-    </div>
-
-    <!-- Четвертый блок -->
-    <div class="btn-group" id="monthsButtons">
-      <label class="input-label">Количество месяцев</label>
-      <button class="months-btn" onclick="setMonths(2)">2</button>
-      <button class="months-btn" onclick="setMonths(3)">3</button>
-      <button class="months-btn" onclick="setMonths(4)">4</button>
-      <button class="months-btn" onclick="setMonths(5)">5</button>
-      <button class="months-btn" onclick="setMonths(6)">6</button>
-    </div>
-
-    <!-- Пятый блок -->
-    <div id="result">Стоимость услуги: 0 руб.</div>
-  </div>
-
-  <script src="script.js"></script>
-
-</body>
-</html>
