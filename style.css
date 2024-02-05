@@ -1,3 +1,66 @@
+:root {
+  /* Определение переменных для цветовой палитры */
+  --primary-1: #F44336; /* Основной цвет 1 */
+  --primary-2: #1E88E5; /* Основной цвет 2 */
+  --primary-3: #23C4F8; /* Основной цвет 3 */
+
+  --border: #CDD9ED; /* Цвет границ */
+  --border-hover: #99A3BA; /* Цвет границ при наведении */
+  --text-color: #6C7486; /* Цвет текста */
+  --text-color-headline: #3F4656; /* Цвет заголовков */
+
+  --shadow: rgba(22, 30, 50, .04); /* Цвет тени */
+}
+
+body {
+  /* Стили для тела документа */
+  font-family: 'Helvetica', sans-serif; /* Шрифт текста */
+  color: var(--text-color); /* Основной цвет текста */
+  background-color: #3F4656; /* Основной цвет фона */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  box-shadow: 0 2px 4px var(--shadow); /* Тень */
+}
+
+h1 {
+  /* Стили для заголовка уровня 1 */
+  color: var(--text-color-headline); /* Цвет заголовка */
+ text-align: center;
+}
+
+.calculator {
+  /* Стили для блока "calculator" */
+  background-color: #fff; /* Цвет фона */
+  border-radius: 10px; /* Радиус скругления углов */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+  width: 80%;
+  text-align: left;
+}
+
+.btn-group {
+  /* Стили для группы кнопок */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  /* Стили для группы ввода данных */
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
 #result {
   /* Стили для результата */
   font-size: 18px;
@@ -36,3 +99,34 @@
 
 .switch-label {
   /* Стили для метки переключателя */
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: var(--border); /* Цвет фона выключенного состояния */
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.switch:checked + .switch-label {
+  /* Стили для включенного состояния метки переключателя */
+  background-color: var(--primary-3); /* Цвет фона включенного состояния */
+}
+
+.switch-label::before {
+  content: '';
+  position: absolute;
+  width: 18px; /* Регулируйте ширину переключающейся части */
+  height: 18px; /* Регулируйте высоту переключающейся части */
+  border-radius: 50%; /* Радиус скругления углов для создания круглой формы */
+  background-color: white; /* Цвет переключающейся части */
+  left: 2px; /* Регулируйте положение по горизонтали */
+  top: 2px; /* Регулируйте положение по вертикали */
+  transition: 0.3s; /* Плавный переход */
+}
+
+.switch:checked + .switch-label::before {
+  transform: translateX(20px); /* Регулируйте расстояние, на которое перемещается переключающаяся часть */
+}
+
+
