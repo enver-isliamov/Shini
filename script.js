@@ -3,12 +3,13 @@ let diameterPrice = 0; // Цена за диаметр
 let withDiskCoefficient = 1; // Коэффициент для учета диска
 let quantity = 4; // Количество
 let months = 2; // Количество месяцев
-let radius = 1; // Значение кнопки (не инициализирована в коде, возможно, есть опечатка)
+let diameter = 1; // Значение кнопки (не инициализирована в коде, возможно, есть опечатка)
 
 // Функция установки цены за диаметр
-function setDiameter(price) {
+function setDiameter(value, price) {
+  diameter = value;
   diameterPrice = price;
-  updateButtonStyle('diameterButtons', price);
+  updateButtonStyle('diameterButtons', value);
   calculate();
 }
 
@@ -26,23 +27,24 @@ function setMonths(value) {
   calculate();
 }
 
-// Функция установки значения кнопки (опечатка в объявлении переменной btn)
-function setRadius(value) {
-  radius = value;
-  updateButtonStyle('radiusButtons', value);
-  calculate();
-}
-
-// Обновление стилей кнопок в группе
 function updateButtonStyle(buttonGroupId, activeValue) {
   const buttons = document.getElementById(buttonGroupId).getElementsByTagName('button');
   for (const button of buttons) {
-    button.classList.remove('active');
-    if (parseInt(button.textContent) === activeValue) {
-      button.classList.add('active');
+    if (button.textContent.startsWith('R') && button.textContent !== `R${activeValue}`) {
+      button.style.backgroundColor = "var(--border)";
+    } else {
+      button.classList.remove('active');
+      if (parseInt(button.textContent) === activeValue) {
+        button.classList.add('active');
+        button.style.backgroundColor = "var(--primary-3)";
+      } else {
+        button.style.backgroundColor = "var(--border)";
+      }
     }
   }
 }
+
+
 
 // Расчет общей стоимости услуги
 function calculate() {
