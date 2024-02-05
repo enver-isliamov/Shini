@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Shini</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор хранения шин</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <h1>Калькулятор хранения шин</h1>
+
+    <!-- Первый блок -->
+    <div class="btn-group" id="diameterButtons">
+      <button class="btn" onclick="setDiameter(350)">R13</button>
+      <button class="btn" onclick="setDiameter(350)">R14</button>
+      <button class="btn" onclick="setDiameter(400)">R15</button>
+      <button class="btn" onclick="setDiameter(400)">R16</button>
+      <button class="btn" onclick="setDiameter(450)">R17</button>
+      <button class="btn" onclick="setDiameter(450)">R18</button>
+      <button class="btn" onclick="setDiameter(500)">R19</button>
+      <button class="btn" onclick="setDiameter(500)">R20</button>
+      <button class="btn" onclick="setDiameter(550)">R21</button>
+    </div>
+
+    <!-- Второй блок -->
+    <div class="input-group" id="withDiskGroup">
+      <label class="input-label">С диском</label>
+      <input type="checkbox" id="withDisk" onchange="calculate()">
+    </div>
+
+    <!-- Третий блок -->
+    <div class="btn-group" id="quantityButtons">
+      <label class="input-label">Количество шин</label>
+      <button class="quantity-btn" onclick="setQuantity(1)">1</button>
+      <button class="quantity-btn" onclick="setQuantity(2)">2</button>
+      <button class="quantity-btn" onclick="setQuantity(3)">3</button>
+      <button class="quantity-btn" onclick="setQuantity(4)">4</button>
+      <button class="quantity-btn" onclick="setQuantity(5)">5</button>
+      <button class="quantity-btn" onclick="setQuantity(6)">6</button>
+      <button class="quantity-btn" onclick="setQuantity(7)">7</button>
+      <button class="quantity-btn" onclick="setQuantity(8)">8</button>
+    </div>
+
+    <!-- Четвертый блок -->
+    <div class="btn-group" id="monthsButtons">
+      <label class="input-label">Количество месяцев</label>
+      <button class="months-btn" onclick="setMonths(2)">2</button>
+      <button class="months-btn" onclick="setMonths(3)">3</button>
+      <button class="months-btn" onclick="setMonths(4)">4</button>
+      <button class="months-btn" onclick="setMonths(5)">5</button>
+      <button class="months-btn" onclick="setMonths(6)">6</button>
+    </div>
+
+    <!-- Пятый блок -->
+    <div id="result">Стоимость услуги: 0 руб.</div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
