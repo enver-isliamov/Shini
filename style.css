@@ -8,7 +8,6 @@
     --border-hover: #99A3BA;
     --text-color: #6C7486;
     --text-color-headline: #3F4656;
-
     --shadow: rgba(22, 30, 50, .04);
 
 body {
@@ -23,8 +22,7 @@ body {
   justify-content: center;
   height: 70vh;
   box-shadow: 0 2px 4px var(--shadow);
-  
-}
+ }
 
 h1 {
   color: #40414f;
@@ -49,7 +47,7 @@ h1 {
 
 .btn {
   --color: var(--primary-1);
-    --text: #fff;
+--text: #fff;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -136,4 +134,3 @@ h1 {
 .switch:checked + .switch-label::before {
   transform: translateX(20px); /* Регулируйте расстояние, на которое перемещается переключающаяся часть */
 }
-
