@@ -1,20 +1,22 @@
 :root {
+  /* Определение переменных для цветовой палитры */
+  --primary-1: #F44336; /* Основной цвет 1 */
+  --primary-2: #1E88E5; /* Основной цвет 2 */
+  --primary-3: #23C4F8; /* Основной цвет 3 */
 
-    --primary-1: #F44336;
-    --primary-2: #1E88E5;
-    --primary-3: #23C4F8;
+  --border: #CDD9ED; /* Цвет границ */
+  --border-hover: #99A3BA; /* Цвет границ при наведении */
+  --text-color: #6C7486; /* Цвет текста */
+  --text-color-headline: #3F4656; /* Цвет заголовков */
 
-    --border: #CDD9ED;
-    --border-hover: #99A3BA;
-    --text-color: #6C7486;
-    --text-color-headline: #3F4656;
-
-    --shadow: rgba(22, 30, 50, .04);
+  --shadow: rgba(22, 30, 50, .04); /* Цвет тени */
+}
 
 body {
-  font-family: 'Helvetica', sans-serif;
-  color: var(--text-color);
-  background-color: #3F4656;
+  /* Стили для тела документа */
+  font-family: 'Helvetica', sans-serif; /* Шрифт текста */
+  color: var(--text-color); /* Основной цвет текста */
+  background-color: #3F4656; /* Основной цвет фона */
   margin: 0;
   padding: 0;
   display: flex;
@@ -22,102 +24,93 @@ body {
   align-items: center;
   justify-content: center;
   height: 70vh;
-  box-shadow: 0 2px 4px var(--shadow);
-  
+  box-shadow: 0 2px 4px var(--shadow); /* Тень */
 }
 
 h1 {
-  color: #40414f;
-  color: var(--text-color-headline);
+  /* Стили для заголовка уровня 1 */
+  color: var(--text-color-headline); /* Цвет заголовка */
+  justify-content: center;
 }
 
 .calculator {
-  background-color: #fff;
-  border-radius: 10px;
+  /* Стили для блока "calculator" */
+  background-color: #fff; /* Цвет фона */
+  border-radius: 10px; /* Радиус скругления углов */
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
   width: 80%;
-    text-align: left;
+  text-align: left;
 }
 
 .btn-group {
+  /* Стили для группы кнопок */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 15px;
 }
 
-.btn {
-  --color: var(--primary-1);
-    --text: #fff;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: manipulation;
-    position: relative;
-    white-space: nowrap;
-    border: none;
-    color: var(--text);
-  padding: 9px 24px;
-    font-size: 14px;
-    line-height: 22px;
-    background-color: var(--border);
-  color: var(--text-color-headline);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.btn.active {
-  background-color: #ffcc00;
-}
-
 .input-group {
+  /* Стили для группы ввода данных */
   margin-bottom: 32px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
+  .switch-container {
+margin-right: 10px;
+}
+
 
 #result {
+  /* Стили для результата */
   font-size: 18px;
-  color: #19c37d;
+  color: var(--primary-3); /* Основной цвет 3 */
   font-weight: bold;
 }
 
-.quantity-btn, .months-btn {
+.quantity-btn, .months-btn, .radius-btn {
+  /* Стили для кнопок */
   padding: 10px 20px;
-  background-color: var(--border);
-  color: var(--text-color-headline);
+  background-color: var(--border); /* Цвет фона */
+  color: var(--text-color-headline); /* Цвет текста */
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; /* Радиус скругления углов */
   cursor: pointer;
   margin: 5px;
 }
 
-.quantity-btn.active, .months-btn.active {
-  background-color: var(--primary-2);
+.quantity-btn.active, .months-btn.active, .radius-btn {
+  /* Стили для активных кнопок количества и месяцев */
+  background-color: var(--primary-3); /* Основной цвет 3 */
 }
   
 .switch-container {
+  /* Стили для контейнера переключателя */
   position: relative;
   display: inline-block;
 }
 
 .switch {
+  /* Стили для переключателя */
   display: none;
 }
 
 .switch-label {
+  /* Стили для метки переключателя */
   display: block;
   position: relative;
-  width: 40px; /* Регулируйте ширину переключателя */
-  height: 20px; /* Регулируйте высоту переключателя */
-  background-color: var(--border);; /* Цвет фона выключенного состояния */
-  border-radius: 10px; /* Радиус скругления углов */
+  width: 40px;
+  height: 20px;
+  background-color: var(--border); /* Цвет фона выключенного состояния */
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .switch:checked + .switch-label {
+  /* Стили для включенного состояния метки переключателя */
   background-color: var(--primary-3); /* Цвет фона включенного состояния */
 }
 
