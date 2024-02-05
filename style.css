@@ -1,6 +1,20 @@
+:root {
+
+    --primary-1: #F44336;
+    --primary-2: #1E88E5;
+    --primary-3: #23C4F8;
+
+    --border: #CDD9ED;
+    --border-hover: #99A3BA;
+    --text-color: #6C7486;
+    --text-color-headline: #3F4656;
+
+    --shadow: rgba(22, 30, 50, .04);
+
 body {
   font-family: 'Helvetica', sans-serif;
-  background-color: #343541;
+  color: var(--text-color);
+  background-color: #3F4656;
   margin: 0;
   padding: 0;
   display: flex;
@@ -8,10 +22,13 @@ body {
   align-items: center;
   justify-content: center;
   height: 70vh;
+  box-shadow: 0 2px 4px var(--shadow);
+  
 }
 
 h1 {
   color: #40414f;
+  color: var(--text-color-headline);
 }
 
 .calculator {
@@ -20,7 +37,7 @@ h1 {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 80%;
-  text-align: center;
+    text-align: left;
 }
 
 .btn-group {
@@ -31,9 +48,21 @@ h1 {
 }
 
 .btn {
-  padding: 10px 20px;
-  background-color: #ccc;
-  color: #fff;
+  --color: var(--primary-1);
+    --text: #fff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    position: relative;
+    white-space: nowrap;
+    border: none;
+    color: var(--text);
+  padding: 9px 24px;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: var(--border);
+  color: var(--text-color-headline);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -45,22 +74,8 @@ h1 {
 }
 
 .input-group {
-  margin-bottom: 15px;
-}
-
-.input-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #40414f;
-  font-weight: bold;
-}
-
-.input-field {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin-bottom: 32px;
+  
 }
 
 #result {
@@ -71,8 +86,8 @@ h1 {
 
 .quantity-btn, .months-btn {
   padding: 10px 20px;
-  background-color: #ccc;
-  color: #fff;
+  background-color: var(--border);
+  color: var(--text-color-headline);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -80,5 +95,45 @@ h1 {
 }
 
 .quantity-btn.active, .months-btn.active {
-  background-color: #df3079;
+  background-color: var(--primary-2);
 }
+  
+.switch-container {
+  position: relative;
+  display: inline-block;
+}
+
+.switch {
+  display: none;
+}
+
+.switch-label {
+  display: block;
+  position: relative;
+  width: 40px; /* Регулируйте ширину переключателя */
+  height: 20px; /* Регулируйте высоту переключателя */
+  background-color: var(--border);; /* Цвет фона выключенного состояния */
+  border-radius: 10px; /* Радиус скругления углов */
+  cursor: pointer;
+}
+
+.switch:checked + .switch-label {
+  background-color: var(--primary-3); /* Цвет фона включенного состояния */
+}
+
+.switch-label::before {
+  content: '';
+  position: absolute;
+  width: 18px; /* Регулируйте ширину переключающейся части */
+  height: 18px; /* Регулируйте высоту переключающейся части */
+  border-radius: 50%; /* Радиус скругления углов для создания круглой формы */
+  background-color: white; /* Цвет переключающейся части */
+  left: 2px; /* Регулируйте положение по горизонтали */
+  top: 2px; /* Регулируйте положение по вертикали */
+  transition: 0.3s; /* Плавный переход */
+}
+
+.switch:checked + .switch-label::before {
+  transform: translateX(20px); /* Регулируйте расстояние, на которое перемещается переключающаяся часть */
+}
+
