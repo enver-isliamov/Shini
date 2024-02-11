@@ -17,7 +17,7 @@ body {
   font-family: 'Helvetica', sans-serif; /* Шрифт текста */
   color: var(--text-color); /* Основной цвет текста */
   background-color: #3F4656; /* Основной цвет фона */
-  margin: 0;
+  margin: 15%;
   padding: 0;
   display: flex;
   flex-direction: column;
