@@ -37,9 +37,9 @@ h1 {
   /* Стили для блока "calculator" */
   background-color: #fff; /* Цвет фона */
   border-radius: 10px; /* Радиус скругления углов */
-  padding: 20px;
+  padding: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
-  width: 80%;
+  width: 100%;
   text-align: left;
 }
 
